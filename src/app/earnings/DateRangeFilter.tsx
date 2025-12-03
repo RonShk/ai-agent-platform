@@ -64,10 +64,10 @@ export default function DateRangeFilter({ defaultStartDate, defaultEndDate }: Da
   };
 
   return (
-    <div className="bg-white rounded-lg border border-zinc-200 p-6 mb-6">
+    <div className="bg-white dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-800 p-6 mb-6">
       <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-end">
         <div className="flex-1">
-          <label className="block text-sm font-medium text-zinc-700 mb-2">
+          <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
             Start Date
           </label>
           <Popover open={startDateOpen} onOpenChange={setStartDateOpen}>
@@ -101,7 +101,7 @@ export default function DateRangeFilter({ defaultStartDate, defaultEndDate }: Da
         </div>
         
         <div className="flex-1">
-          <label className="block text-sm font-medium text-zinc-700 mb-2">
+          <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
             End Date
           </label>
           <Popover open={endDateOpen} onOpenChange={setEndDateOpen}>
@@ -153,7 +153,7 @@ export default function DateRangeFilter({ defaultStartDate, defaultEndDate }: Da
       </div>
       
       {!startDate && !endDate && (
-        <p className="text-sm text-zinc-500 mt-3">
+        <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-3">
           Leave dates empty to view earnings for the upcoming month
         </p>
       )}
